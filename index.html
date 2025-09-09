@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siddharth Sharma - Resume</title>
+  <style>
+    /* ===== Global Dark Theme with Background Image ===== */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #e2e8f0;
+      min-height: 100vh;
+      position: relative;
+      background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx6WV0zpeiJwanZ0-YkvouH9v23ropaDJadQ&s') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    /* Overlay for better readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      z-index: -1;
+    }
+
+    a { color: #38bdf8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Smooth scroll with padding */
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px; /* Navbar height + spacing */
+    }
+
+    /* ===== Navbar ===== */
+    nav {
+      background: #1e293b;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+    nav h1 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: #e2e8f0;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #38bdf8;
+    }
+
+    /* ===== Sections ===== */
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      position: relative;
+    }
+    section h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      border-left: 4px solid #38bdf8;
+      padding-left: 10px;
+    }
+
+    /* Divider between sections */
+    section::after {
+      content: "";
+      display: block;
+      width: 60%;
+      height: 2px;
+      margin: 40px auto;
+      background: linear-gradient(to right, transparent, #38bdf8, transparent);
+      opacity: 0.6;
+    }
+    section:last-of-type::after {
+      display: none;
+    }
+
+    /* ===== Card Style ===== */
+    .card {
+      background: rgba(30, 41, 59, 0.9);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+    }
+
+    /* ===== Accordion ===== */
+    .accordion {
+      background: #334155;
+      color: #e2e8f0;
+      cursor: pointer;
+      padding: 14px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    .accordion:hover {
+      background: #475569;
+    }
+    .panel {
+      padding: 0 16px;
+      display: none;
+      background: #1e293b;
+      overflow: hidden;
+      border-left: 3px solid #38bdf8;
+      margin-bottom: 12px;
+      border-radius: 0 0 6px 6px;
+    }
+    .panel p, .panel ul {
+      margin: 12px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>Siddharth Sharma</h1>
+    <ul>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <button class="accordion">MCA (2024-2026) — Shri Vaishnav Institute of Management and Science College, Indore</button>
+      <div class="panel"><p>Pursuing MCA with focus on advanced software development and database systems.</p></div>
+
+      <button class="accordion">B.Sc. (IT) (2021-2024) — Govt. Madhav Science College, Ujjain</button>
+      <div class="panel">
+        <p>1st Year SGPA: 7.38</p>
+        <p>2nd Year SGPA: 7.15</p>
+        <p>3rd Year SGPA: 7.25</p>
+      </div>
+
+      <button class="accordion">12th Standard — Vivekananda Vidhya Vihar School, MP Board</button>
+      <div class="panel"><p>Percentage: 86.8%</p></div>
+
+      <button class="accordion">10th Standard — Vivekananda Vidhya Vihar School, MP Board</button>
+      <div class="panel"><p>Percentage: 84.2%</p></div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+      <button class="accordion">Frontend Skills</button>
+      <div class="panel"><p>HTML, CSS</p></div>
+
+      <button class="accordion">Backend Skills</button>
+      <div class="panel"><p>Java</p></div>
+
+      <button class="accordion">Platforms</button>
+      <div class="panel"><p>Visual Studio Code, IntelliJ IDEA, Notepad++</p></div>
+
+      <button class="accordion">Other Skills</button>
+      <div class="panel"><p>Analytical Thinking, Time Management, Team Work, Problem-Solving</p></div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card">
+      <button class="accordion">Amazon-style Portfolio Website</button>
+      <div class="panel">
+        <p>Designed and developed a responsive portfolio inspired by Amazon's layout. Demonstrated frontend skills using HTML and CSS to showcase projects, education, and personal profile in a professional format.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates Section -->
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <div class="card">
+      <button class="accordion">C Language Training — IIT Bombay (April 2025)</button>
+      <div class="panel"><p>Completed as part of Spoken Tutorial Project, covering basics of C programming.</p></div>
+
+      <button class="accordion">C++ Training — IIT Bombay (April 2025)</button>
+      <div class="panel"><p>Covered Object-Oriented Programming concepts with IIT Bombay course material.</p></div>
+
+      <button class="accordion">Java Programming Workshop — Genxcellence Software Pvt. Ltd (May 2025)</button>
+      <div class="panel"><p>Hands-on workshop focusing on Java programming and application development.</p></div>
+
+      <button class="accordion">Infosys Springboard — Core Java (April 2025)</button>
+      <div class="panel"><p>Training in Core Java including OOP, Exception Handling, Collections, and Multithreading.</p></div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Email: <a href="mailto:siddharthsharma24022002@gmail.com">siddharthsharma24022002@gmail.com</a></p>
+      <p>Phone: +91 94797 26722</p>
+      <p>Location: Indore, Madhya Pradesh, India</p>
+      <p>GitHub: <a href="https://github.com/siddharth44423" target="_blank">github.com/siddharth44423</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/siddharth-sharma-655a46319" target="_blank">linkedin.com/in/siddharth-sharma-655a46319</a></p>
+    </div>
+  </section>
+
+  <!-- Accordion Script -->
+  <script>
+    const acc = document.getElementsByClassName("accordion");
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
